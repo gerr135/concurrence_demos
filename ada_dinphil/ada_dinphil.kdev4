@@ -1,0 +1,4 @@
+[Project]
+Name=ada_dinphil
+Manager=KDevCustomMakeManager
+VersionControl=kdevgit

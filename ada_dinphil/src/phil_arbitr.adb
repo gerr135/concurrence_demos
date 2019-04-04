@@ -1,6 +1,6 @@
 --
 -- Testing concurrency. Dining philosophers.
--- Using protected object to hold sticks
+-- Using task to arbitrate eating process
 --
 -- This program is distributed in the hope that it will be useful,
 -- but WITHOUT ANY WARRANTY; without even the implied warranty of

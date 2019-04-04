@@ -1,3 +1,6 @@
+-- The main units were producing a weird lock/logging underrun.
+-- This is a simple code to test the logging itself..
+
 with Ada.Text_IO;use Ada.Text_IO;
 with test_buf_pkg; use test_buf_pkg;
 procedure test_buffer is

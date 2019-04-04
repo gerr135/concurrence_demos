@@ -1,4 +1,3 @@
-TARGET = run_ada_dinphil
 SOURCES = src/*.ad?
 
 # rule to link the program

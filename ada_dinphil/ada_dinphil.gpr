@@ -5,12 +5,12 @@ project ada_dinphil is
     for Source_Dirs use ("src");
     for Object_Dir use "obj/" & external ("mode", "dbg");
     for Exec_Dir use ".";
-    for Main use ("run_ada_dinphil.adb");  --   <<<<  list of "main" source files
+    for Main use ("phil0.adb", "phil1.adb", "phil_arbitr.adb");
 
-    for Create_Missing_Dirs use "true"; -- remove this if your gprbuild is too old
+    for Create_Missing_Dirs use "true";
 
-    type Mode_Type is ("dbg", "release");         -- all possible values
-    Mode : Mode_Type := external ("mode", "dbg"); -- a typed variable
+    type Mode_Type is ("dbg", "release");
+    Mode : Mode_Type := external ("mode", "dbg");
 
     package Compiler is
         case Mode is

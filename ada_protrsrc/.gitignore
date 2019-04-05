@@ -1,0 +1,9 @@
+# Object file
+*.o
+
+# Ada Library Information
+*.ali
+
+# generated executable and objects
+phil?
+phil_arbitr

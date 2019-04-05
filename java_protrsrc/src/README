@@ -1,0 +1,25 @@
+Many files, but well, this is "the Java way" - everything is a class, and only one (real) class per file, so we have no choice..
+So, a short description to make sense of it all:
+
+To not get totally lost in all these files, they have a proper package structure.
+bank/*
+handles money holding. A "protected resource". As we are asked to do two versions,
+we have an abstract class (bank.Abstraction), providing interface and principal fields and then two inherited classes,
+for each type of locking - via semaphores (bank.Semaph) and synchronized methods (bank.Synchro).
+This way we can keep all the different implementations in one place and avoid code duplication throughout the project.
+
+family/*
+This implements the "family logic" - Parent and Child classes holding the corresponding threads
+(each is a separate process as requested). Family is a thread-manager class, specific for this structure.
+
+handler/*
+All the "utility":
+Log* - abstract parent class and inherited specific classes - to do reporting in command line and via GUI.
+Params and Globals - holding the data that needs to be passed around.
+Split in two to avoid cyclic dependencies: Params hold the numeric values passed around
+and Globals is for holding the initialized objects (logger, theBank, gui, theFamily, etc..)
+FamilyGui - a class holding the construction of the GUI window with common code for reading/setting the visual fields.
+
+Top level: holds the Main* classes,
+these are only few lines big. They only call appropriate constructors (GUI/cmdLine + Semaph/Synchro - thus 4 versions total).
+This way we avoid any code duplication. When any part of the code needs to be adjusted it needs to be done in only one place..

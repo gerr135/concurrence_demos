@@ -3,4 +3,4 @@ SOURCES = src/*.ad?
 
 # rule to link the program
 family: $(SOURCES)
-	gprbuild -P family.gpr
+	gprbuild -P ada_rsrc.gpr

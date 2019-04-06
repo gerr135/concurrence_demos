@@ -1,4 +1,4 @@
 [Project]
-Name=ada_protrsrc
+Name=ada_rsrc
 Manager=KDevCustomMakeManager
 VersionControl=kdevgit

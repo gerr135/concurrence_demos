@@ -1,7 +1,4 @@
-Many files, but well, this is "the Java way" - everything is a class, and only one (real) class per file, so we have no choice..
-So, a short description to make sense of it all:
-
-To not get totally lost in all these files, they have a proper package structure.
+The sources are organized in the following structure:
 bank/*
 handles money holding. A "protected resource". As we are asked to do two versions,
 we have an abstract class (bank.Abstraction), providing interface and principal fields and then two inherited classes,
@@ -23,3 +20,6 @@ FamilyGui - a class holding the construction of the GUI window with common code 
 Top level: holds the Main* classes,
 these are only few lines big. They only call appropriate constructors (GUI/cmdLine + Semaph/Synchro - thus 4 versions total).
 This way we avoid any code duplication. When any part of the code needs to be adjusted it needs to be done in only one place..
+
+
+NOTE: this code uses old swing version. The gui part needs updating for new Java version..

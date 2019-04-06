@@ -6,11 +6,11 @@
 JC=javac
 CLSDIR=cls
 SRCDIR=src
-vpath %.c src
-vpath %.h src
 
-sources = $(addprefix $(SRCDIR)/, MainGUISemaph.java  MainGUISynchro.java  MainCmdlineSemaph.java  MainCmdlineSynchro.java)
-classes = $(addprefix $(CLSDIR)/, MainGUISemaph.class MainGUISynchro.class MainCmdlineSemaph.class MainCmdlineSynchro.class )
+#sources = $(addprefix $(SRCDIR)/, MainGUISemaph.java  MainGUISynchro.java  MainCmdlineSemaph.java  MainCmdlineSynchro.java)
+#classes = $(addprefix $(CLSDIR)/, MainGUISemaph.class MainGUISynchro.class MainCmdlineSemaph.class MainCmdlineSynchro.class )
+sources = $(addprefix $(SRCDIR)/, MainCmdlineSemaph.java  MainCmdlineSynchro.java)
+classes = $(addprefix $(CLSDIR)/, MainCmdlineSemaph.class MainCmdlineSynchro.class )
 
 build:
 	$(JC) -cp $(SRCDIR) -d $(CLSDIR) $(sources)

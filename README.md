@@ -6,13 +6,13 @@ For each language, the following demos are provided:
   - Dining philosophers:  
   A classical concurrence excercise, where 5 "philosophers" sit at the common table and eat using sticks. Only 5 sticks are  provided, one between each philosopher. To eat each requires two sticks. The goal is to simulate philosophers eating and sleeping at random, while avoiding starvation and deadlocks..
 
-  - Protected resource:  
+  - Shared resource:  
   There is a shared resource, used by multiple entities of two types: donors and acceptors. Donors increase and acceptors decrese resource at random. The goal is to implement this basic system, preventing overuse and the deadlocks..
 
 ### Ada
 Ada has inbuilt concurrence handling at the level of the language. The paradigm is rather different from most other languages, as the concurrent features are designed as part of the language itself, and not just as a library calls attached to the core. All standard primitives (semaphores, resources, protected code blocks) can either be mapped directly to a language feature or constructed from provided language constructs.. Needs initial reading to get into the spirit, but provides most protection via proper feature design, as is typical of Ada.
-  - [Dining philosophers](ada_dinphil/) TBD
-  - [Protected resource](ada_protrsrc/) TBD
+  - [Dining philosophers](ada_dinphil/)
+  - [Shared resource](ada_rsrc/) TBD
   
 ### C/C++
 There is no support of concurrence/parallellizm at the language level at all. Not even via STL or analog. Moreover, specific mechanisms are highly platform-dependent and, as C/C++ is a low-level languae (essentially a glorified macroassembler, as far as such basic features are concerned), providing a single high-level ("thick") library would be against the design purpose of this language. Instead, platform-specific libs or calls have to be used. 
@@ -24,12 +24,13 @@ TBD
 
 ### Java
 Java core language is rather oblivious to concurrence constructs, but it comes with a very extensive standard library, which provides the means to do parallel programming in it. Pretty much all standard parallel primitives are provided and documented, allowing to do most of the necessary tasks using just the standard API..
-  - [Dining philosophers](java_dinphil) TBD
-  - [Protected resource](java_protrsrc/) TBD
+  - [Dining philosophers](java_dinphil)
+  - [Shared resource](java_resource/) TBD
+  - [Pipes demo](java_pipes/)  A basic demo of creating and connecting pipes in Java.
 
 
 ### Python
 Similar to Java, Python supports most concurrence priitives via its (also very extensive) standard library. Also well documents and extensive, most simple tasks can be done using just standard resources.
   - [Dining philosophers](py_dinphil) TBD
-  - [Protected resource](py_protrsrc/) TBD
+  - [Shared resource](py_rsrc/) TBD
 

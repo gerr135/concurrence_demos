@@ -1,4 +1,4 @@
 [Project]
-Name=java_protrsrc
+Name=java_rsrc
 Manager=KDevCustomMakeManager
 VersionControl=kdevgit

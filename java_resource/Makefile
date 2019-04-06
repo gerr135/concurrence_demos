@@ -15,6 +15,6 @@ classes = $(addprefix $(CLSDIR)/, MainGUISemaph.class MainGUISynchro.class MainC
 build:
 	$(JC) -cp $(SRCDIR) -d $(CLSDIR) $(sources)
 clean:
-	rm $(classes)
+	rm $(CLSDIR)/*
 
 .PHONY : clean

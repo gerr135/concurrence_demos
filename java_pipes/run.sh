@@ -1,4 +1,4 @@
 #! /bin/bash
 cd cls
-java siple_threads_java
+java pipe_demo
 cd ..
